@@ -29,7 +29,5 @@ app.use((err, req, res, next) => {
   const code = err.code === 11000 ? 409 : err.status || 500;
   res.status(code).json({ error: err.message || "Server error" });
 });
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () =>
-  console.log(`Server berjalan di http://localhost:${PORT}`),
-);
+
+module.exports = app;
