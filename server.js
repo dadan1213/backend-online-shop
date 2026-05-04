@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(morgan("dev"));
 // Koneksi Mongo
 mongoose
-  .connect(process.env.MONGODB_URI)
+  .connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB terhubung"))
   .catch((err) => {
     console.error("Mongo error:", err.message);
